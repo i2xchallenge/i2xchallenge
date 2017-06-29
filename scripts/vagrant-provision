@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Install packages
+apt-get update
+apt-get install -y build-essential python-dev python-pip sqlite3 libsqlite3-dev git
+
+# Python dependencies
+pip install -r /opt/i2x/requirements.txt
