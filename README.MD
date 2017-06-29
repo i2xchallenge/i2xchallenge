@@ -7,8 +7,8 @@
 	4. After sshing into vagrant virtual machine run goto `>>> cd /opt/i2x`
 	5. `>>> python3 manage migrate`
 	6. `>>> python3 manage.py test` to run test
-	7. `>>> python3 manage.py runserver` to run server
-	8. Run this from your host machine or from vagrant virtual machine `>>> curl localhost:8000/api/v1/user/`
+	7. `>>> python3 manage.py runserver 0.0.0.0:9000` to run server
+	8. Run this from your host machine or from vagrant virtual machine `>>> curl localhost:9000/api/v1/user/`
 
 
 ### Setup on OXS without vagrant and virtualbox
@@ -33,7 +33,7 @@
 	password   : user's password, required.
 	first_name : user's first name, required.
 	last_name  : user's lastname, required.
-	verified   : True if user is verified, optional.
+	verified   : True if user is verified, required.
 	
 	Example:
 	{

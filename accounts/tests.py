@@ -35,7 +35,7 @@ class TestTeamApi(TestCase):
         )
         self.assertEqual(response.status_code, 201)
         self.assertEqual(Team.objects.all().first().name, team_name)
-        
+
 
 class TestRegisterApi(TestCase):
 
