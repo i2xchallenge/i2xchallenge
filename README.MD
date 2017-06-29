@@ -1,15 +1,37 @@
+# Usage
+
+### Vagrant setup
+	1. Download and install vagrant and [virtual box] (https://www.vagrantup.com/downloads.html) if you do not have it already
+	2. `>>> vagrant up --provision` 
+	3. `>>> vagrant ssh`
+	4. After sshing into vagrant virtual machine run goto `>>> cd /opt/i2x`
+	5. `python manage migrate`
+	6. `python manage.py test` to run test
+	7. `python manage.py runserver` to run server
+
+
+### Setup on OXS without vagrant and virtualbox
+	1. Install depencencies `>>> brew install build-essential python-dev python-pip sqlite3 libsqlite3-dev git`
+	2. Create Virtualenv `>>> pip install virtualenv i2x_env`
+	3. Activate virtualenv `>>> ./i2x_env/bin/activate`
+	2. Install Requiremnts `>>> pip install -r requirements.txt`
+	3. Migrate database `>>> python manage.py migrate`
+	4. Run tests `>>> python manage.py test`
+	5. Run Server `>>> python manage.py runserver`
+
+
 # API Docs
 
 #### Register
 	
 	Endpont: POST `/api/v1/user/`
 	
-	username: username of the user, required.
-	email: email of user, required.
-	password: user's password, required.
-	first_name: user's first name, required.
-	last_name: user's lastname, required.
-	verified: True if user is verified, optional.
+	username   : username of the user, required.
+	email      : email of user, required.
+	password   : user's password, required.
+	first_name : user's first name, required.
+	last_name  : user's lastname, required.
+	verified   : True if user is verified, optional.
 	
 	Example:
 	{
@@ -38,7 +60,7 @@
 	Endpoint GET `/api/v1/verify`
 		
 	GET query params:
-		user_id: 121231
+		user_id : 121231
 		
 		Example:
 		https://i2x.ai/api/v1/verify/?user_id=121
