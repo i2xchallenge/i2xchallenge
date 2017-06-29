@@ -11,5 +11,6 @@ Vagrant.configure(VAGRANT_API_VERSION) do |config|
   config.vm.provision "shell", path: "scripts/vagrant-provision"
 
   # Networking details
+  config.vm.network "forwarded_port", guest: 8000, host: 8000
   config.vm.network "private_network", ip: "172.28.128.4"
 end

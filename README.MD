@@ -5,19 +5,21 @@
 	2. `>>> vagrant up --provision` 
 	3. `>>> vagrant ssh`
 	4. After sshing into vagrant virtual machine run goto `>>> cd /opt/i2x`
-	5. `python manage migrate`
-	6. `python manage.py test` to run test
-	7. `python manage.py runserver` to run server
+	5. `>>> python3 manage migrate`
+	6. `>>> python3 manage.py test` to run test
+	7. `>>> python3 manage.py runserver` to run server
+	8. Run this from your host machine or from vagrant virtual machine `>>> curl localhost:8000/api/v1/user/`
 
 
 ### Setup on OXS without vagrant and virtualbox
-	1. Install depencencies `>>> brew install build-essential python-dev python-pip sqlite3 libsqlite3-dev git`
-	2. Create Virtualenv `>>> pip install virtualenv i2x_env`
+	1. Install depencencies `>>> brew install build-essential python3-dev python3-pip sqlite3 libsqlite3-dev git`
+	2. Create Virtualenv `>>> pip3 install virtualenv i2x_env`
 	3. Activate virtualenv `>>> ./i2x_env/bin/activate`
-	2. Install Requiremnts `>>> pip install -r requirements.txt`
-	3. Migrate database `>>> python manage.py migrate`
-	4. Run tests `>>> python manage.py test`
-	5. Run Server `>>> python manage.py runserver`
+	2. Install Requiremnts `>>> pip3 install -r requirements.txt`
+	3. Migrate database `>>> python3 manage.py migrate`
+	4. Run tests `>>> python3 manage.py test`
+	5. Run Server `>>> python3 manage.py runserver`
+	7. Curl `>>> curl localhost:8000/api/v1/user/`
 
 
 # API Docs
