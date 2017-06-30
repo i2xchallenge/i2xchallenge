@@ -1,3 +1,13 @@
+# Heroku Endpoint
+
+**https://secure-beyond-28811.herokuapp.com**
+
+Examples:
+
+`curl -XGET https://secure-beyond-28811.herokuapp.com/api/v1/user/`
+
+`curl -XPOST -H 'content-type: application/json' -d '{"user": {"username": "darthvader", "first_name": "darth", "last_name": "vader", "email": "darth@deathstar.com", "password": "12345"}, "verified": false}' https://secure-beyond-28811.herokuapp.com/api/v1/user/`
+
 # Usage
 
 #### Vagrant setup
@@ -41,8 +51,8 @@ Example:
     verified: false,
     user: {
 	    "username": "DarthVader",
-            "password": "deathstar",
-            "email": "darth@darkside.com",
+        "password": "deathstar",
+        "email": "darth@darkside.com",
 	    "first_name": "Darth",
 	    "last_name": "Vader"
 	}
